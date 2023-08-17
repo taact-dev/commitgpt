@@ -1,6 +1,6 @@
 {
-  "name": "commitgpt",
-  "version": "2.0.0",
+  "name": "auto-commit",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RomanHotsiy/commitgpt.git"
+    "url": "git+https://github.com/taact-dev/commitgpt"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RomanHotsiy/commitgpt/issues"
+    "url": "https://github.com/taact-dev/commitgpt/issues"
   },
-  "homepage": "https://github.com/RomanHotsiy/commitgpt#readme",
+  "homepage": "https://github.com/taact-dev/commitgpt#readme",
   "dependencies": {
     "enquirer": "^2.3.6",
     "openai": "^3.2.1",

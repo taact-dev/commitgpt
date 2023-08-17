@@ -16,9 +16,24 @@ const debug = (...args: unknown[]) => {
 const CUSTOM_MESSAGE_OPTION = "[write own message]...";
 const spinner = ora();
 
+// Extensions to check for changes
+const fileExtensions = [
+    '*.js',
+    '*.css',
+    '*.ts',
+    '*.md',
+    '*.pug',
+    '*.html',
+    '*.txt',
+    '*.yaml',
+    '*.json',
+];
+const extensionsStr = fileExtensions.map(ext => `'${ext}'`).join(' ');
+console.log('extensionsStr17\n', extensionsStr);
+
 let diff = "";
 try {
-  diff = execSync("git diff --cached").toString();
+  diff = execSync(`git diff --cached -- ${extensionsStr}`).toString();
   if (!diff) {
     console.log("No changes to commit.");
     process.exit(0);
@@ -57,7 +72,7 @@ async function run(diff: string, currentBranch: string) {
 
   const api = new ChatGPTClient();
   console.log('currentBranch17\n', currentBranch);
-  const prompt = loadPromptTemplate()
+  let prompt = loadPromptTemplate()
     .replace(
       /{{currentBranch}}/g,
       currentBranch
@@ -67,7 +82,6 @@ async function run(diff: string, currentBranch: string) {
       ["```", diff, "```"].join("\n")
     );
 
-  console.log("prompt17\n", prompt);
   while (true) {
     debug("prompt: ", prompt);
     const choices = await getMessages(api, prompt);

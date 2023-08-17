@@ -1,4 +1,4 @@
-# commitgpt test
+# auto-commit
 
 Automatically generate commit messages using ChatGPT.
 
@@ -10,7 +10,7 @@ Automatically generate commit messages using ChatGPT.
 npx commitgpt
 ```
 
-### Get OpenAI api key
+### Get an OpenAI API key
 https://platform.openai.com/account/api-keys
 
 ### Configuration (Optional)
@@ -35,11 +35,11 @@ suggest 10 commit messages based on the following diff:
 {{diff}}
 commit messages should:
  - follow conventional commits
- - message format should be: <type>[scope]: <description>
+ - message format should be: <type>[{{currentBranch}}]: <description>
 
 examples:
- - fix(authentication): add password regex pattern
- - feat(storage): add new test cases
+ - fix[{{currentBranch}}]: add password regex pattern
+ - feat[{{currentBranch}}]: add new test cases
 ```
 
 this file can be used to change the template used to generate the prompt request. you can modify the template to fit your needs.
@@ -49,15 +49,3 @@ this file can be used to change the template used to generate the prompt request
 - Runs `git diff --cached`
 - Sends the diff to ChatGPT and asks it to suggest commit messages
 - Shows suggestions to the user
-
-## Credits
-
-Some code and approaches were inspired by the awesome projects below:
-
-- https://github.com/acheong08/ChatGPT
-- https://github.com/transitive-bullshit/chatgpt-api
-- https://github.com/wong2/chat-gpt-google-extension
-
-----
-
-Do you need API docs? Check out [Redocly](https://redocly.com).

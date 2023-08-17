@@ -4,10 +4,12 @@ export const defaultPromptTemplate = [
   "",
   "commit messages should:",
   " - follow conventional commits",
-  " - message format should be: <type>[{{currentBranch}}]: <description>",
+  " - message format must be: <type>[{{currentBranch}}]: <description>",
 
   "",
   "examples:",
-  " - fix(authentication): add password regex pattern",
-  " - feat(storage): add new test cases",
+  " - fix:[{{currentBranch}}] - add password regex pattern",
+  " - test:[{{currentBranch}}] - add new test cases",
+  " - refactor:[{{currentBranch}}] - update logic around order handling",
+  " - feat:[{{currentBranch}}] - add a new option to sync prices",
 ].join("\n");
