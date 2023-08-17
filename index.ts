@@ -16,7 +16,7 @@ const debug = (...args: unknown[]) => {
 const CUSTOM_MESSAGE_OPTION = "[write own message]...";
 const spinner = ora();
 
-// Extensions to check for changes
+// Commit files with these extensions only
 const fileExtensions = [
     '*.js',
     '*.css',
@@ -29,7 +29,6 @@ const fileExtensions = [
     '*.json',
 ];
 const extensionsStr = fileExtensions.map(ext => `'${ext}'`).join(' ');
-console.log('extensionsStr17\n', extensionsStr);
 
 let diff = "";
 try {
@@ -71,7 +70,7 @@ async function run(diff: string, currentBranch: string) {
   }
 
   const api = new ChatGPTClient();
-  console.log('currentBranch17\n', currentBranch);
+  
   let prompt = loadPromptTemplate()
     .replace(
       /{{currentBranch}}/g,

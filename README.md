@@ -4,10 +4,28 @@ Automatically generate commit messages using ChatGPT.
 
 ![commitgpt](https://user-images.githubusercontent.com/3975738/205517867-1e7533ae-a8e7-4c0d-afb6-d259635f3f9d.gif)
 
+### Important note
+A commit will be executed only based on changes made in the following `fileExtensions`: [
+    '*.js',
+    '*.css',
+    '*.ts',
+    '*.md',
+    '*.pug',
+    '*.html',
+    '*.txt',
+    '*.yaml',
+    '*.json',
+]
+
+For additional/different files, add them like so:
+```
+npm run start ".gitignore" "Dockerfile" ".scss"
+```
+
 ## How to use?
 
 ```bash
-npx commitgpt
+npm run start
 ```
 
 ### Get an OpenAI API key
