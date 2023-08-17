@@ -1,4 +1,4 @@
-# commitgpt
+# commitgpt test
 
 Automatically generate commit messages using ChatGPT.
 

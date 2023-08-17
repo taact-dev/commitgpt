@@ -4,7 +4,7 @@ export const defaultPromptTemplate = [
   "",
   "commit messages should:",
   " - follow conventional commits",
-  " - message format should be: <type>[scope]: <description>",
+  " - message format should be: <type>[{{currentBranch}}]: <description>",
 
   "",
   "examples:",
