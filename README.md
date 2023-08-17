@@ -1,4 +1,4 @@
-# auto-commit
+# auto-commit test
 
 Automatically generate commit messages using ChatGPT.
 
