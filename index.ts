@@ -46,7 +46,13 @@ let currentBranch = "";
 try {
   currentBranch = execSync("git branch --show-current").toString();
   currentBranch = currentBranch.replace(/[\r\n]/gm, '').trim();
-  currentBranch = currentBranch.substring(0, 8);
+  const processString = (str) => {
+    // split string into array by '-'
+    let splitArr = str.split('-');
+    // return first two parts of split string joined by '-'
+    return splitArr[0] + '-' + splitArr[1];
+  }
+  currentBranch = processString(currentBranch);
 } catch (e) {
   console.log("Failed to run git branch --show-current");
   process.exit(1);
