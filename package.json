@@ -1,5 +1,5 @@
 {
-  "name": "auto-commit",
+  "name": "@jetti/jetti-commitgpt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

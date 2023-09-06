@@ -1,4 +1,4 @@
-# auto-commit
+# jetti-commitgpt
 
 Automatically generate commit messages using ChatGPT.
 
@@ -17,7 +17,7 @@ A commit will be executed only based on changes made in the following `fileExten
     '*.json',
 ]
 
-For additional/different files, add them like so:
+To commit additional/different types of files:
 ```
 npm run start ".gitignore" "Dockerfile" ".scss"
 ```
@@ -43,7 +43,7 @@ default:
   "maxTokens": 2048,
 }
 ```
-this file can be used to change the openai model and other parameters.
+this file can be used to change the OpenAI model and other parameters.
 
 
 ### `.commitgpt-template` file
@@ -53,11 +53,13 @@ suggest 10 commit messages based on the following diff:
 {{diff}}
 commit messages should:
  - follow conventional commits
- - message format should be: <type>[{{currentBranch}}]: <description>
+ - message format must be: <type>[{{currentBranch}}]: <description>
 
 examples:
- - fix[{{currentBranch}}]: add password regex pattern
- - feat[{{currentBranch}}]: add new test cases
+ - fix:[{{currentBranch}}] - add password regex pattern
+ - test:[{{currentBranch}}] - add new test cases
+ - refactor:[{{currentBranch}}] - update logic around order handling
+ - feat:[{{currentBranch}}] - add a new option to sync prices
 ```
 
 this file can be used to change the template used to generate the prompt request. you can modify the template to fit your needs.
