@@ -2,7 +2,7 @@
 
 Automatically generate commit messages using ChatGPT.
 
-![commitgpt](https://user-images.githubusercontent.com/3975738/205517867-1e7533ae-a8e7-4c0d-afb6-d259635f3f9d.gif)
+![jetti-commitgpt](https://user-images.githubusercontent.com/84446009/265981415-aaced893-54fa-4bb3-91ba-e35df8587976.gif)
 
 ### Important note
 A commit will be executed only based on changes made in the following `fileExtensions`: [
