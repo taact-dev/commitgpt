@@ -1,5 +1,5 @@
 {
-  "name": "@jetti/jetti-commitgpt",
+  "name": "jetti.commitgpt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taact-dev/commitgpt"
+    "url": "git+https://github.com/taact-dev/jetti.commitgpt"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taact-dev/commitgpt/issues"
+    "url": "https://github.com/taact-dev/jetti.commitgpt/issues"
   },
-  "homepage": "https://github.com/taact-dev/commitgpt#readme",
+  "homepage": "https://github.com/taact-dev/jetti.commitgpt#readme",
   "dependencies": {
     "enquirer": "^2.3.6",
     "openai": "^3.2.1",
